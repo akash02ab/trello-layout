@@ -6,13 +6,21 @@
 
 .container {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     padding: 1.5rem;
     font-family: sans-serif;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .box {
-    width: 28rem;
+    max-width: 28rem;
+    min-width: 18rem;
+    width: 100%;
     min-height: 28rem;
     background: dodgerblue;
     color: white;
@@ -29,7 +37,9 @@
     background: white;
     color: dodgerblue;
     font-weight: 700;
-    width: 26rem;
+    max-width: 26rem;
+    min-width: 16rem;
+    width: 100%;
     padding: 1rem;
     cursor: move;
 }
